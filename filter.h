@@ -10,7 +10,7 @@ the total acceleration to get the user acceleration
 #ifndef FILTER_H_
 #define FILTER_H_
 
-#include "types.h"
+#include "stepTypes.h"
 
 class Filter
 {

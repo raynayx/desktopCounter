@@ -38,10 +38,10 @@ int main()
 
     // a.countSteps();
 
-    for(size_t i=0;i<totalAccel.capacity();i++)
-    {
-        cout << totalAccel[i].x <<"\t"<< totalAccel[i].y << "\t" << totalAccel[i].z << "\n";
-    }
+    // for(size_t i=0;i<totalAccel.capacity();i++)
+    // {
+    //     cout << totalAccel[i].x <<"\t"<< totalAccel[i].y << "\t" << totalAccel[i].z << "\n";
+    // }
 
     for(size_t i=0; i < gravityAccel.capacity();i++)
     {

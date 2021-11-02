@@ -1,7 +1,7 @@
 #ifndef ANALYZER_H_
 #define ANALYZER_H_
 
-#include "types.h"
+#include "stepTypes.h"
 
 class Analyzer
 {

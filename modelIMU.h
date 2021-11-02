@@ -1,7 +1,8 @@
-#include "types.h"
+#include "stepTypes.h"
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <vector>
 #include <string>
 using namespace std;
 class IMU
@@ -39,7 +40,7 @@ class IMU
         axes getAccelData()
         {
             string temp;
-            vector<string>tempv;
+            vector<string> tempv;
             axes A;
 
             if(dataFile.eof())
@@ -51,7 +52,7 @@ class IMU
                  
             tempv = split(temp,'\t');
 
-            for(size_t i=0;i<tempv.size();i++)
+            for(size_t i=0;i<tempv.capacity();i++)
             {
                 if(i==0)
                 {
