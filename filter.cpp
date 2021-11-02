@@ -32,7 +32,7 @@ void Filter::movingAverage(axes* X,axes* Y,int size,int window)
 }
 
 
-void Filter::movingAverage(boost::circular_buffer<axes> &X,boost::circular_buffer<axes> &Y,int window)
+void Filter::movingAverage(CB &X,CB& Y,int window)
 {	
 	if(first)
 	{

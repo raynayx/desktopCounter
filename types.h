@@ -45,7 +45,7 @@ typedef struct COEFFICIENTS
 }COEFFICIENTS;
 
 
-typedef boost::circular_buffer<axes> CB;
-// typedef boost::circular_buffer<axes, std::allocator<axes> >& CBref;
+// typedef boost::circular_buffer<axes> CB;
+typedef boost::circular_buffer<axes, std::allocator<axes>> CB;
 
 #endif
