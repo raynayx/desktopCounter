@@ -17,6 +17,7 @@ class Analyzer
 
 
     private:
+        uint8_t i = 1;
         unsigned long steps;
         bool countStep;
         double *data;

@@ -20,17 +20,19 @@ int Analyzer::getSteps()
 
 int Analyzer::countSteps()
 {
-    for(int i = 1; i < maxSize; i++)
+    for(; i <= maxSize; i++)
     {
-
-    if((data[i] >= THRESHOLD) && (data[i-1]) < THRESHOLD)
+        int cur = i%maxSize;
+        int prev = (i-1)%maxSize;
+    if((data[cur] >= THRESHOLD) && (data[prev]) < THRESHOLD)
     {
         if(!countStep)
             continue;       
         steps++;
         countStep = false;
+        return steps;
     }
-    if((data[i] < 0) && (data[i-1] >= 0))
+    if((data[cur] < 0) && (data[prev] >= 0))
         countStep = true;
 
         

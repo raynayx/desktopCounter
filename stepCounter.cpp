@@ -20,7 +20,7 @@ double final[maxSize];
 //IMU object
 IMU imu;
 Filter f;
-// Analyzer a(final);
+Analyzer a(final);
 int i = 0;
 bool first = true;
 
@@ -32,25 +32,26 @@ int main()
 {  
     imu.fillBuffer(totalAccel);
     f.movingAverage(totalAccel,gravityAccel,WINDOW);
-    // f.getUserAccel(totalAccel,gravityAccel,userAccel);
-    // f.dotProduct(userAccel,gravityAccel,dotP);
-    // f.movingAverage(dotP,final,maxSize,WINDOW);
+    f.getUserAccel(totalAccel,gravityAccel,userAccel);
+    f.dotProduct(userAccel,gravityAccel,dotP);
+    f.movingAverage(dotP,final,maxSize,WINDOW);
 
-    // a.countSteps();
+    cout << a.countSteps() <<"\n";
+    usleep(500000);
 
     // for(size_t i=0;i<totalAccel.capacity();i++)
     // {
     //     cout << totalAccel[i].x <<"\t"<< totalAccel[i].y << "\t" << totalAccel[i].z << "\n";
     // }
 
-    for(size_t i=0; i < gravityAccel.capacity();i++)
-    {
-        cout <<gravityAccel[i].x << "\t"
-         <<gravityAccel[i].y <<"\t" 
-         <<gravityAccel[i].z <<"\n";
+    // for(size_t i=0; i < gravityAccel.capacity();i++)
+    // {
+    //     cout <<gravityAccel[i].x << "\t"
+    //      <<gravityAccel[i].y <<"\t" 
+    //      <<gravityAccel[i].z <<"\n";
 
-        usleep(1000000); 
-    }
+    //     usleep(1000000); 
+    // }
 
     #ifdef DEBUG
         // Serial.print(i);TAB;
