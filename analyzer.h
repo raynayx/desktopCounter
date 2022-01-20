@@ -9,7 +9,7 @@ class Analyzer
         Analyzer(double *d);
 
         int getSteps(); 
-        // void updateSteps(int numberFromSet);
+        void updateSteps(int numberFromSet);
         int countSteps();
 
 
@@ -17,7 +17,7 @@ class Analyzer
 
 
     private:
-        uint8_t i = 1;
+        uint8_t i = 0;
         unsigned long steps;
         bool countStep;
         double *data;
