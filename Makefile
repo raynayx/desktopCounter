@@ -2,6 +2,7 @@
 
 CCXX = g++
 CFLAGS = -fdiagnostics-color -Wall -g
+LINKFLAGS = -c -ggdb
 
 
 OBJ := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
@@ -13,7 +14,9 @@ all: ${OUT}
 
 $(OUT): $(OBJ)
 	$(CCXX) $(CFLAGS) -o $@ $(OBJ)
-	rm -vf *.o
+
+%.o:%.cpp
+	$(CCXX) $(LINKFLAGS) $<
 
 
 

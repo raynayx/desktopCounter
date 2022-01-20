@@ -37,7 +37,7 @@ int main()
     f.movingAverage(dotP,final,maxSize,WINDOW);
 
     cout << a.countSteps() <<"\n";
-    usleep(500000);
+    // usleep(500000);
 
     // for(size_t i=0;i<totalAccel.capacity();i++)
     // {
